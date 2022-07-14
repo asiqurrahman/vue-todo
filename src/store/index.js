@@ -15,6 +15,8 @@ export default createStore({
     // commit('increase', response.data)
     // $store.dispatch('increase')
   },
-  getters: {},
+  getters: {
+    // $store.getters.functionName
+  },
   modules: {},
 });
