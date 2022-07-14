@@ -16,7 +16,7 @@
 <script setup>
 import Field from './Field.vue'
 import Task from './Task.vue'
-import {ref, reactive} from 'vue'
+import {ref, reactive, watch} from 'vue'
 
 let showinput = ref(false)
 let data = reactive([])
@@ -33,6 +33,12 @@ const addTask = (text) => {
 const deleteTask = (index) => {
     data.splice(index, 1)
 }
+
+watch(data, (currentValue, oldValue) => {
+  if(currentValue){
+    alert('changed')
+  }
+});
 
 
 </script>
